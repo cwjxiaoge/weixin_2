@@ -34,6 +34,10 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
 	<!-- 用于访问关系数据库，不需要写SQL语句、不要自己创建数据库表、能够自动根据接口的方法名称生成查询语句 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
