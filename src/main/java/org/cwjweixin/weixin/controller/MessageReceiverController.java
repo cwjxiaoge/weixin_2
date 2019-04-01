@@ -1,5 +1,7 @@
 package org.cwjweixin.weixin.controller;
 
+import org.cwjweixin.domain.InMessage;
+import org.cwjweixin.weixin.controller.service.MessageConvertHelper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -45,6 +47,15 @@ public class MessageReceiverController {
 		// LOG.trace必须要求日志记录器的配置为trace级别才能输出
 		LOG.trace("收到的消息原文：\n{}\n------------------------------", xml);
 		// 转换消息
+		
+		// 转换消息1.获取消息的类型
+//		String type=xml.substring(xml.indexOf("<MsgType><![CDATA[")+18);
+//		type=type.substring(0,type.indexOf("]"));
+		// 转换消息2.根据消息类型，把XML转换为对应类型的对象
+		
+		InMessage inMessage=MessageConvertHelper.convert(xml);
+		LOG.debug("转换后的消息对象\n{}\n",inMessage);
+		
 		// 把消息丢入队列
 		// 消费队列中的消息
 		// 产生客服消息
