@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.cwjweixin.domain.InMessage;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -16,12 +18,15 @@ public class LinkInMessage extends InMessage {
 
 	
 	@XmlElement(name="Title")
+	@JsonProperty("Title")
 	private String title;
 	
 	@XmlElement(name="Description")
+	@JsonProperty("Description")
 	private String description;
 	
 	@XmlElement(name="Url")
+	@JsonProperty("Url")
 	private String url;
 
 	public String getTitle() {

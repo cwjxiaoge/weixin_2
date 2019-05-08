@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.cwjweixin.domain.InMessage;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -15,9 +17,11 @@ public class VoiceInMessage extends InMessage{
 	
 	
 	@XmlElement(name="MediaId")
+	@JsonProperty("MediaId")
 	private String mediaId;
 	
 	@XmlElement(name="Format")
+	@JsonProperty("Format")
 	private String format;
 
 	public String getMediaId() {

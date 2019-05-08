@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.cwjweixin.domain.InMessage;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class TextInMessage extends InMessage{
@@ -14,6 +16,7 @@ public class TextInMessage extends InMessage{
 	private static final long serialVersionUID = 1L;
 	
 	@XmlElement(name="Content")
+	@JsonProperty("Content")
 	private String content;
 
 	public String getContent() {

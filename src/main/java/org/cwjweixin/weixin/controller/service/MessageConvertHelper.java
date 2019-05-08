@@ -7,6 +7,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import javax.xml.bind.JAXB;
 
 import org.cwjweixin.domain.InMessage;
+import org.cwjweixin.domain.event.EventInMessage;
 import org.cwjweixin.domain.image.ImageInMessage;
 import org.cwjweixin.domain.link.LinkInMessage;
 import org.cwjweixin.domain.location.LocationInMessage;
@@ -25,10 +26,22 @@ public class MessageConvertHelper {
 		typeMap.put("vioce", VoiceInMessage.class);
 		typeMap.put("video", VideoInMessage.class);
 		typeMap.put("location", LocationInMessage.class);
-		//typeMap.put("event", Event.class);
+		typeMap.put("event", EventInMessage.class);
 		typeMap.put("link", LinkInMessage.class);
 		typeMap.put("shortvideo", ShortvideoInMessage.class);
 	}
+	
+	public static Class<? extends InMessage> getClass(String xml) {
+		// 获取类型
+		String type = xml.substring(xml.indexOf("<MsgType><![CDATA[") + 18);
+		type = type.substring(0, type.indexOf("]"));
+
+		// 获取Java类
+		Class<? extends InMessage> c = typeMap.get(type);
+		return c;
+	}
+	
+	
 	// 2.提供一个静态的方法，可以传入XML，把XML转换为Java对象
 	public static <T extends InMessage> T convert(String xml) {
 		
@@ -38,7 +51,9 @@ public class MessageConvertHelper {
 		
 		// 获取Java类
 		Class<? extends InMessage> c=typeMap.get(type);
-		
+		if(c==null) {
+			return null;
+		}
 		// 使用JAXB转换
 		@SuppressWarnings("unchecked")
 		T msg =(T) JAXB.unmarshal(new StringReader(xml),c);

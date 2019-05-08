@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.cwjweixin.domain.InMessage;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @XmlRootElement(name="xml")
@@ -16,9 +18,11 @@ public class VideoInMessage extends InMessage {
 	private static final long serialVersionUID = 1L;
 
 	@XmlElement(name="MediaId")
+	@JsonProperty("MediaId")
 	private String mediaId;
 	
 	@XmlElement(name="ThumbMediaId")
+	@JsonProperty("ThumbMediaId")
 	private String thumbMediaId;
 
 	public String getMediaId() {

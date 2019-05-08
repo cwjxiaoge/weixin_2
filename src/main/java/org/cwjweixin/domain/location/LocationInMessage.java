@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.cwjweixin.domain.InMessage;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 
 @XmlRootElement(name="xml")
@@ -16,15 +18,19 @@ public class LocationInMessage extends InMessage {
 	private static final long serialVersionUID = 1L;
 	
 	@XmlElement(name="Location_X")
+	@JsonProperty("Location_X")
 	private String location_X;
 	
 	@XmlElement(name="Location_Y")
+	@JsonProperty("Location_Y")
 	private String location_Y;
 	
 	@XmlElement(name="Scale")
+	@JsonProperty("Scale")
 	private String scale;
 	
 	@XmlElement(name="Label")
+	@JsonProperty("Label")
 	private String label;
 
 	public String getLocation_X() {

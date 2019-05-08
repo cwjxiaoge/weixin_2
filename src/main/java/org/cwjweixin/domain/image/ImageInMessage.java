@@ -7,6 +7,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.cwjweixin.domain.InMessage;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -16,9 +18,11 @@ public class ImageInMessage extends InMessage{
 	
 
 	@XmlElement(name="PicUrl")
+	@JsonProperty("PicUrl")
 	private String picUrl;
 	
 	@XmlElement(name="MediaId")
+	@JsonProperty("MediaId")
 	private String mediaId;
 
 	public String getPicUrl() {
