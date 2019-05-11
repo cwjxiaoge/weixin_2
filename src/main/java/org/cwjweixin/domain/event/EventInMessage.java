@@ -18,8 +18,8 @@ public class EventInMessage extends InMessage{
 	@XmlElement(name="Event")
 	@JsonProperty("Event")
 	private String event;
-	@XmlElement(name="EeventKey")
-	@JsonProperty("EeventKey")
+	@XmlElement(name="EventKey")
+	@JsonProperty("EventKey")
 	private String eventKey;
 	public String getEvent() {
 		return event;

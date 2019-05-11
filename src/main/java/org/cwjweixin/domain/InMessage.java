@@ -11,8 +11,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @XmlRootElement(name="xml")
 @XmlAccessorType(XmlAccessType.FIELD)
 public abstract class InMessage implements Serializable {
-	private static final long seriaVersionUID=1L;
-	
+	private static final long serialVersionUID = 1L;
 	@XmlElement(name="ToUserName")
 	@JsonProperty("ToUserName")
 	private String toUSerName;
@@ -22,9 +21,9 @@ public abstract class InMessage implements Serializable {
 	@XmlElement(name="CreateTime")
 	@JsonProperty("CreateTime")
 	private long createTime;
-	@XmlElement(name="MygType")
-	@JsonProperty("MygType")
-	private String mygType;
+	@XmlElement(name="MsgType")
+	@JsonProperty("MsgType")
+	private String msgType;
 	@XmlElement(name="MygId")
 	@JsonProperty("MygId")
 	private long mygId;
@@ -47,10 +46,10 @@ public abstract class InMessage implements Serializable {
 		this.createTime = createTime;
 	}
 	public String getMygType() {
-		return mygType;
+		return msgType;
 	}
 	public void setMygType(String mygType) {
-		this.mygType = mygType;
+		this.msgType = mygType;
 	}
 	public long getMygId() {
 		return mygId;
