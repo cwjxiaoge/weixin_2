@@ -42,7 +42,7 @@ public class VoiceInMessage extends InMessage{
 
 	@Override
 	public String toString() {
-		return "VoiceInMessage [mediaId=" + mediaId + ", format=" + format + ", getToUSerName()=" + getToUSerName()
+		return "VoiceInMessage [mediaId=" + mediaId + ", format=" + format + ", getToUSerName()=" + getToUserName()
 				+ ", getFromUserName()=" + getFromUserName() + ", getCreateTime()=" + getCreateTime()
 				+ ", getMygType()=" + getMygType() + ", getMygId()=" + getMygId() + "]";
 	}

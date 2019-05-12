@@ -14,7 +14,7 @@ public abstract class InMessage implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@XmlElement(name="ToUserName")
 	@JsonProperty("ToUserName")
-	private String toUSerName;
+	private String toUserName;
 	@XmlElement(name="FromUserName")
 	@JsonProperty("FromUserName")
 	private String fromUserName;
@@ -27,11 +27,11 @@ public abstract class InMessage implements Serializable {
 	@XmlElement(name="MygId")
 	@JsonProperty("MygId")
 	private long mygId;
-	public String getToUSerName() {
-		return toUSerName;
+	public String getToUserName() {
+		return toUserName;
 	}
-	public void setToUSerName(String toUSerName) {
-		this.toUSerName = toUSerName;
+	public void setToUserName(String toUserName) {
+		this.toUserName = toUserName;
 	}
 	public String getFromUserName() {
 		return fromUserName;

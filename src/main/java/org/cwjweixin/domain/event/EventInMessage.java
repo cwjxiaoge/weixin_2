@@ -35,7 +35,7 @@ public class EventInMessage extends InMessage{
 	}
 	@Override
 	public String toString() {
-		return "EventInMessage [event=" + event + ", eventKey=" + eventKey + ", getToUSerName()=" + getToUSerName()
+		return "EventInMessage [event=" + event + ", eventKey=" + eventKey + ", getToUSerName()=" + getToUserName()
 				+ ", getFromUserName()=" + getFromUserName() + ", getCreateTime()=" + getCreateTime()
 				+ ", getMygType()=" + getMygType() + ", getMygId()=" + getMygId() + "]";
 	}

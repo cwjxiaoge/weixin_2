@@ -68,7 +68,7 @@ public class LocationInMessage extends InMessage {
 	@Override
 	public String toString() {
 		return "LocationInMessage [location_X=" + location_X + ", location_Y=" + location_Y + ", scale=" + scale
-				+ ", label=" + label + ", getToUSerName()=" + getToUSerName() + ", getFromUserName()="
+				+ ", label=" + label + ", getToUSerName()=" + getToUserName() + ", getFromUserName()="
 				+ getFromUserName() + ", getCreateTime()=" + getCreateTime() + ", getMygType()=" + getMygType()
 				+ ", getMygId()=" + getMygId() + "]";
 	}

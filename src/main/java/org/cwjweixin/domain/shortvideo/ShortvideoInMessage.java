@@ -44,7 +44,7 @@ public class ShortvideoInMessage extends InMessage {
 	@Override
 	public String toString() {
 		return "ShortvideoInMessage [mediaId=" + mediaId + ", thumbMediaId=" + thumbMediaId + ", getToUSerName()="
-				+ getToUSerName() + ", getFromUserName()=" + getFromUserName() + ", getCreateTime()=" + getCreateTime()
+				+ getToUserName() + ", getFromUserName()=" + getFromUserName() + ", getCreateTime()=" + getCreateTime()
 				+ ", getMygType()=" + getMygType() + ", getMygId()=" + getMygId() + "]";
 	}
 	

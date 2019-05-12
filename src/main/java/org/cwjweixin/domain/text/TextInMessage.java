@@ -29,7 +29,7 @@ public class TextInMessage extends InMessage{
 
 	@Override
 	public String toString() {
-		return "TextInMessage [content=" + content + ", getToUSerName()=" + getToUSerName() + ", getFromUserName()="
+		return "TextInMessage [content=" + content + ", getToUSerName()=" + getToUserName() + ", getFromUserName()="
 				+ getFromUserName() + ", getCreateTime()=" + getCreateTime() + ", getMygType()=" + getMygType()
 				+ ", getMygId()=" + getMygId() + "]";
 	}
